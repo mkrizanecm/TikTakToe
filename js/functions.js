@@ -55,3 +55,15 @@ function checkSet () {
 
     console.log(ninth_block); return;
 }
+
+function resetGame() {
+    document.getElementById('first').innerHTML = '';
+    document.getElementById('second').innerHTML = '';
+    document.getElementById('third').innerHTML = '';
+    document.getElementById('fourth').innerHTML = '';
+    document.getElementById('fifth').innerHTML = '';
+    document.getElementById('sixth').innerHTML = '';
+    document.getElementById('seventh').innerHTML = '';
+    document.getElementById('eight').innerHTML = '';
+    document.getElementById('ninth').innerHTML = '';
+}
