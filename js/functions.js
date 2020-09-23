@@ -1,10 +1,10 @@
-function setImage (element) {
+function setImage(element) {
     var image = document.getElementById(element).innerHTML;
     if (image == '') {
         var startImage = document.getElementById('start-image').src;
         var fileName = startImage.replace(/^.*[\\\/]/, '');  
 
-        document.getElementById(element).innerHTML = "<img class='image' src='icons/" + fileName + "'/>";
+        document.getElementById(element).innerHTML = "<img id='image' class='image' src='icons/" + fileName + "'/>";
         checkSet();
 
         if (fileName == 'o.png') {
@@ -15,7 +15,7 @@ function setImage (element) {
     }
 }
 
-function checkSet () {
+function checkSet() {
     var first_block = document.getElementById('first').innerHTML;
     var second_block = document.getElementById('second').innerHTML;
     var third_block = document.getElementById('third').innerHTML;
@@ -27,39 +27,52 @@ function checkSet () {
     var ninth_block = document.getElementById('ninth').innerHTML;
 
     if ((first_block == second_block && first_block == third_block) && (first_block != '' && second_block != '' && third_block != '')) {
-        alert("Hello! I am an alert box!!");
+        getWinner('first');
     } 
 
     if ((first_block == fourth_block && first_block == seventh_block) && (first_block != '' && fourth_block != '' && seventh_block != '')) {
-        alert("Hello! I am an alert box!!");
+        getWinner('first');
     } 
 
     if ((first_block == fifth_block && first_block == ninth_block) && (first_block != '' && fifth_block != '' && ninth_block != '')) {
-        alert("Hello! I am an alert box!!");
+        getWinner('first');
     } 
     
     if ((second_block == fifth_block && second_block == eight_block) && (second_block != '' && fifth_block != '' && eight_block != '')) {
-        alert("Hello! I am an alert box!!");
+        getWinner('second');
     } 
 
     if ((third_block == fifth_block && third_block == seventh_block) && (third_block != '' && fifth_block != '' && seventh_block != '')) {
-        alert("Hello! I am an alert box!!");
+        getWinner('third');
     } 
 
     if ((third_block == sixth_block && third_block == ninth_block) && (third_block != '' && sixth_block != '' && ninth_block != '')) {
-        alert("Hello! I am an alert box!!");
+        getWinner('third');
     } 
 
     if ((fourth_block == fifth_block && fourth_block == sixth_block) && (fourth_block != '' && fifth_block != '' && sixth_block != '')) {
-        alert("Hello! I am an alert box!!");
+        getWinner('fourth');
     } 
 
     if ((seventh_block == eight_block && seventh_block == ninth_block) && (seventh_block != '' && eight_block != '' && ninth_block != '')) {
-        alert("Hello! I am an alert box!!");
-    } 
+        getWinner('seventh');
+    }
+    
+    if (first_block != '' && second_block != '' && third_block != '' && fourth_block != '' && fifth_block != '' && sixth_block != '' && seventh_block != '' && eight_block != '' && ninth_block != '') {
+        document.getElementById('result-text').innerHTML = 'The game is tied!';
+    }
+}
+
+function getWinner(element) {
+    if (document.getElementById(element).innerHTML.includes('o.png')) {
+        document.getElementById('result-text').innerHTML = 'Letter O won!';
+    } else {
+        document.getElementById('result-text').innerHTML = 'Letter X won!';
+    }
 }
 
 function resetGame() {
+    document.getElementById('result-text').innerHTML = '';
     document.getElementById('first').innerHTML = '';
     document.getElementById('second').innerHTML = '';
     document.getElementById('third').innerHTML = '';
