@@ -15,6 +15,10 @@
     display: none;
 }
 
+.container .result-text {
+    color: orange;
+}
+
 .container .game-table {
     width: 700px;
     height: 700px;
