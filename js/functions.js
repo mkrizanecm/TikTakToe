@@ -1,8 +1,17 @@
 function setImage (element) {
     var image = document.getElementById(element).innerHTML;
     if (image == '') {
-        document.getElementById(element).innerHTML = "<img class='image' src='icons/o.png'/>";
+        var startImage = document.getElementById('start-image').src;
+        var fileName = startImage.replace(/^.*[\\\/]/, '');  
+
+        document.getElementById(element).innerHTML = "<img class='image' src='icons/" + fileName + "'/>";
         checkSet();
+
+        if (fileName == 'o.png') {
+            document.getElementById('start-image').outerHTML = "<img id='start-image' class='start-image' src='icons/x.png'/>"
+        } else {
+            document.getElementById('start-image').outerHTML = "<img id='start-image' class='start-image' src='icons/o.png'/>"
+        }
     }
 }
 
@@ -18,42 +27,36 @@ function checkSet () {
     var ninth_block = document.getElementById('ninth').innerHTML;
 
     if ((first_block == second_block && first_block == third_block) && (first_block != '' && second_block != '' && third_block != '')) {
-        console.log(1); return;
+        alert("Hello! I am an alert box!!");
     } 
 
     if ((first_block == fourth_block && first_block == seventh_block) && (first_block != '' && fourth_block != '' && seventh_block != '')) {
-        console.log(1); return;
+        alert("Hello! I am an alert box!!");
     } 
 
     if ((first_block == fifth_block && first_block == ninth_block) && (first_block != '' && fifth_block != '' && ninth_block != '')) {
-        console.log(1); return;
+        alert("Hello! I am an alert box!!");
     } 
     
     if ((second_block == fifth_block && second_block == eight_block) && (second_block != '' && fifth_block != '' && eight_block != '')) {
-        console.log(1); return;
-    } 
-
-    if ((second_block == second_block && first_block == third_block) && (first_block != '' && second_block != '' && third_block != '')) {
-        console.log(1); return;
+        alert("Hello! I am an alert box!!");
     } 
 
     if ((third_block == fifth_block && third_block == seventh_block) && (third_block != '' && fifth_block != '' && seventh_block != '')) {
-        console.log(1); return;
+        alert("Hello! I am an alert box!!");
     } 
 
     if ((third_block == sixth_block && third_block == ninth_block) && (third_block != '' && sixth_block != '' && ninth_block != '')) {
-        console.log(1); return;
+        alert("Hello! I am an alert box!!");
     } 
 
     if ((fourth_block == fifth_block && fourth_block == sixth_block) && (fourth_block != '' && fifth_block != '' && sixth_block != '')) {
-        console.log(1); return;
+        alert("Hello! I am an alert box!!");
     } 
 
     if ((seventh_block == eight_block && seventh_block == ninth_block) && (seventh_block != '' && eight_block != '' && ninth_block != '')) {
-        console.log(1); return;
+        alert("Hello! I am an alert box!!");
     } 
-
-    console.log(ninth_block); return;
 }
 
 function resetGame() {
