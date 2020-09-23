@@ -1,0 +1,36 @@
+.body {
+    font-family: 'Epilogue', sans-serif;
+}
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container .game-table {
+    width: 700px;
+    height: 700px;
+    border: 4px solid black;
+    text-align: center;
+    font-family: 'Epilogue';
+}
+
+.container .game-table .game-table-row {
+    border: 4px solid black;
+}
+
+.container .game-table .game-table-row .game-table-column{
+    border: 4px solid black;
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
+}
+
+.container .game-table .game-table-row .game-table-column .image{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
