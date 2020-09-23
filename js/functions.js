@@ -69,10 +69,21 @@ function getWinner(element) {
     } else {
         document.getElementById('result-text').innerHTML = 'Letter X won!';
     }
+
+    document.getElementById('first').removeAttribute('onclick');
+    document.getElementById('second').removeAttribute('onclick');
+    document.getElementById('third').removeAttribute('onclick');
+    document.getElementById('fourth').removeAttribute('onclick');
+    document.getElementById('fifth').removeAttribute('onclick');
+    document.getElementById('sixth').removeAttribute('onclick');
+    document.getElementById('seventh').removeAttribute('onclick');
+    document.getElementById('eight').removeAttribute('onclick');
+    document.getElementById('ninth').removeAttribute('onclick');
 }
 
 function resetGame() {
     document.getElementById('result-text').innerHTML = '';
+
     document.getElementById('first').innerHTML = '';
     document.getElementById('second').innerHTML = '';
     document.getElementById('third').innerHTML = '';
@@ -82,4 +93,14 @@ function resetGame() {
     document.getElementById('seventh').innerHTML = '';
     document.getElementById('eight').innerHTML = '';
     document.getElementById('ninth').innerHTML = '';
+
+    document.getElementById('first').setAttribute('onclick', 'setImage("first")');
+    document.getElementById('second').setAttribute('onclick', 'setImage("second")');
+    document.getElementById('third').setAttribute('onclick', 'setImage("third")');
+    document.getElementById('fourth').setAttribute('onclick', 'setImage("fourth")');
+    document.getElementById('fifth').setAttribute('onclick', 'setImage("fifth")');
+    document.getElementById('sixth').setAttribute('onclick', 'setImage("sixth")');
+    document.getElementById('seventh').setAttribute('onclick', 'setImage("seventh")');
+    document.getElementById('eight').setAttribute('onclick', 'setImage("eight")');
+    document.getElementById('ninth').setAttribute('onclick', 'setImage("ninth")');
 }
