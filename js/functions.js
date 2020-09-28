@@ -28,38 +28,24 @@ function checkSet() {
 
     if ((first_block == second_block && first_block == third_block) && (first_block != '' && second_block != '' && third_block != '')) {
         getWinner('first');
-    } 
-
-    if ((first_block == fourth_block && first_block == seventh_block) && (first_block != '' && fourth_block != '' && seventh_block != '')) {
+    } else if ((first_block == fourth_block && first_block == seventh_block) && (first_block != '' && fourth_block != '' && seventh_block != '')) {
         getWinner('first');
-    } 
-
-    if ((first_block == fifth_block && first_block == ninth_block) && (first_block != '' && fifth_block != '' && ninth_block != '')) {
+    } else if ((first_block == fifth_block && first_block == ninth_block) && (first_block != '' && fifth_block != '' && ninth_block != '')) {
         getWinner('first');
-    } 
-    
-    if ((second_block == fifth_block && second_block == eight_block) && (second_block != '' && fifth_block != '' && eight_block != '')) {
+    } else if ((second_block == fifth_block && second_block == eight_block) && (second_block != '' && fifth_block != '' && eight_block != '')) {
         getWinner('second');
-    } 
-
-    if ((third_block == fifth_block && third_block == seventh_block) && (third_block != '' && fifth_block != '' && seventh_block != '')) {
+    } else if ((third_block == fifth_block && third_block == seventh_block) && (third_block != '' && fifth_block != '' && seventh_block != '')) {
         getWinner('third');
-    } 
-
-    if ((third_block == sixth_block && third_block == ninth_block) && (third_block != '' && sixth_block != '' && ninth_block != '')) {
+    } else if ((third_block == sixth_block && third_block == ninth_block) && (third_block != '' && sixth_block != '' && ninth_block != '')) {
         getWinner('third');
-    } 
-
-    if ((fourth_block == fifth_block && fourth_block == sixth_block) && (fourth_block != '' && fifth_block != '' && sixth_block != '')) {
+    } else if ((fourth_block == fifth_block && fourth_block == sixth_block) && (fourth_block != '' && fifth_block != '' && sixth_block != '')) {
         getWinner('fourth');
-    } 
-
-    if ((seventh_block == eight_block && seventh_block == ninth_block) && (seventh_block != '' && eight_block != '' && ninth_block != '')) {
+    } else if ((seventh_block == eight_block && seventh_block == ninth_block) && (seventh_block != '' && eight_block != '' && ninth_block != '')) {
         getWinner('seventh');
-    }
-    
-    if (first_block != '' && second_block != '' && third_block != '' && fourth_block != '' && fifth_block != '' && sixth_block != '' && seventh_block != '' && eight_block != '' && ninth_block != '') {
-        document.getElementById('result-text').innerHTML = 'The game is tied!';
+    } else {
+        if (first_block != '' && second_block != '' && third_block != '' && fourth_block != '' && fifth_block != '' && sixth_block != '' && seventh_block != '' && eight_block != '' && ninth_block != '') {
+            document.getElementById('result-text').innerHTML = 'The game is tied!';
+        }
     }
 }
 
