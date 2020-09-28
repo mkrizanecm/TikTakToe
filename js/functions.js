@@ -66,8 +66,10 @@ function checkSet() {
 function getWinner(element) {
     if (document.getElementById(element).innerHTML.includes('o.png')) {
         document.getElementById('result-text').innerHTML = 'Letter O won!';
+        document.getElementById('o').innerHTML =  parseInt(document.getElementById('o').innerHTML) + 1;
     } else {
         document.getElementById('result-text').innerHTML = 'Letter X won!';
+        document.getElementById('x').innerHTML =  parseInt(document.getElementById('x').innerHTML) + 1;
     }
 
     document.getElementById('first').removeAttribute('onclick');

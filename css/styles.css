@@ -11,6 +11,16 @@
     text-align: center;
 }
 
+.container .results .result-x {
+    float: left;
+    width: 50%;
+}
+
+.container .results .result-o {
+    float: right;
+    width: 50%;
+}
+
 .container .start-image {
     display: none;
 }
